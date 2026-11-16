@@ -8,12 +8,29 @@ or an error dictionary:
 
 import sqlite3
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Literal, Optional, TypedDict, Union
 
 from app.config import settings
 from app.resolver import resolver
 
 INGRES_SOURCE = "INGRES (ingres.iith.ac.in) / CGWB Open Data"
+
+
+class ToolSuccess(TypedDict):
+    """Structured success response."""
+    value: Any
+    unit: str
+    year: Optional[Union[int, str]]
+    location: str
+    source: str
+
+
+class ToolErrorDict(TypedDict):
+    """Structured error response."""
+    error: Literal["data_not_available"]
+
+
+ToolResultType = Union[ToolSuccess, ToolErrorDict]
 
 
 def get_db_connection(db_path: Optional[Path] = None) -> sqlite3.Connection:
@@ -47,7 +64,7 @@ def get_groundwater_level(
     year: Optional[int] = None,
     season: Optional[str] = "pre_monsoon",
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """Retrieve depth to groundwater level (in meters below ground level / mbgl).
 
     Args:
@@ -99,7 +116,7 @@ def get_stage_of_extraction(
     location: str,
     year: Optional[int] = None,
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """Retrieve the Stage of Groundwater Extraction percentage (SOE %).
 
     SOE = (Total Annual Extraction / Annual Extractable Resource) * 100
@@ -142,7 +159,7 @@ def get_category(
     location: str,
     year: Optional[int] = None,
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """Retrieve groundwater assessment category (Safe, Semi-Critical, Critical, Over-Exploited)."""
     loc = resolver.resolve(location)
     if not loc:
@@ -182,7 +199,7 @@ def get_recharge(
     location: str,
     year: Optional[int] = None,
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """Retrieve Annual Extractable Groundwater Resource (in ham / hectare-meters)."""
     loc = resolver.resolve(location)
     if not loc:
@@ -223,7 +240,7 @@ def get_extraction(
     year: Optional[int] = None,
     usage: Optional[str] = "total",
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """Retrieve Current Annual Groundwater Extraction (in ham).
 
     Args:
@@ -278,7 +295,7 @@ def compare_locations(
     metric: str,
     year: Optional[int] = None,
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """Compare a groundwater metric across multiple locations."""
     if not locations:
         return {"error": "data_not_available"}
@@ -328,7 +345,7 @@ def get_trend(
     start_year: Optional[int] = None,
     end_year: Optional[int] = None,
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """Retrieve multi-year historical trend for a metric at a specific location."""
     loc = resolver.resolve(location)
     if not loc:
@@ -407,7 +424,7 @@ def rank_locations(
     year: Optional[int] = None,
     ascending: bool = False,
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """Rank given locations by a specific metric."""
     comp = compare_locations(locations, metric, year, db_path)
     if "error" in comp:
@@ -440,7 +457,7 @@ def list_blocks(
     category: Optional[str] = None,
     year: Optional[int] = None,
     db_path: Optional[Path] = None,
-) -> Dict[str, Any]:
+) -> ToolResultType:
     """List all assessment blocks in a district, optionally filtered by category.
 
     Args:
