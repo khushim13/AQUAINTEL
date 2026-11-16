@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 
 from app.config import settings
-from app.services.entity_resolver import resolver
+from app.resolver import resolver
 
 INGRES_SOURCE = "INGRES (ingres.iith.ac.in) / CGWB Open Data"
 
