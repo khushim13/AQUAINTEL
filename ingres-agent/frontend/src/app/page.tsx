@@ -20,6 +20,8 @@ interface Message {
   params?: Record<string, unknown> | null;
   data?: Record<string, unknown> | null;
   timestamp: string;
+  responseLanguage?: string;
+  detectedLanguage?: string;
 }
 
 export default function ChatPage() {
@@ -79,7 +81,7 @@ export default function ChatPage() {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({ message: text, language }),
       });
 
       if (!response.ok) {
@@ -96,6 +98,8 @@ export default function ChatPage() {
         params: result.params,
         data: result.data,
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+        responseLanguage: result.response_language,
+        detectedLanguage: result.detected_language,
       };
 
       setMessages((prev) => [...prev, assistantMsg]);
@@ -248,9 +252,16 @@ export default function ChatPage() {
               ) : (
                 <div className="w-full max-w-3xl rounded-2xl rounded-tl-xs border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
                   <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 text-xs">
-                    <span className="flex items-center gap-1.5 font-bold text-sky-800">
-                      <Droplets className="h-3.5 w-3.5 text-sky-600" /> INGRES Virtual Assistant
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="flex items-center gap-1.5 font-bold text-sky-800">
+                        <Droplets className="h-3.5 w-3.5 text-sky-600" /> INGRES Virtual Assistant
+                      </span>
+                      {msg.responseLanguage === "hi" && (
+                        <span className="rounded-full bg-orange-50 px-2 py-0.5 text-[9px] font-semibold text-orange-700 border border-orange-200">
+                          🇮🇳 हिन्दी
+                        </span>
+                      )}
+                    </div>
                     <span className="text-[10px] text-slate-400">{msg.timestamp}</span>
                   </div>
 
