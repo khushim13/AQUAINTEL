@@ -1,0 +1,81 @@
+state_name,district_name,block_name,year,annual_extractable_resources_ham,current_extraction_total_ham,current_extraction_irrigation_ham,current_extraction_domestic_ham,stage_of_extraction_pct,category,pre_monsoon_water_level_mbgl,post_monsoon_water_level_mbgl
+Rajasthan,Jaipur,All,2023,42100.5,85420.0,72100.0,13320.0,202.9,Over-Exploited,34.2,32.1
+Rajasthan,Jaipur,All,2022,43200.0,84100.0,71500.0,12600.0,194.7,Over-Exploited,33.5,31.4
+Rajasthan,Jaipur,All,2021,44000.0,82800.0,70800.0,12000.0,188.2,Over-Exploited,32.8,30.6
+Rajasthan,Jaipur,Amber,2023,3800.0,8100.0,6900.0,1200.0,213.2,Over-Exploited,36.5,34.2
+Rajasthan,Jaipur,Bassi,2023,4100.0,7900.0,6800.0,1100.0,192.7,Over-Exploited,32.1,30.0
+Rajasthan,Jaipur,Chaksu,2023,3600.0,6800.0,5900.0,900.0,188.9,Over-Exploited,30.4,28.5
+Rajasthan,Jaipur,Govindgarh,2023,2900.0,6900.0,6100.0,800.0,237.9,Over-Exploited,38.2,36.1
+Rajasthan,Jaipur,Jhotwara,2023,3200.0,8400.0,6700.0,1700.0,262.5,Over-Exploited,42.5,40.1
+Rajasthan,Jaipur,Kotputli,2023,4500.0,7200.0,6200.0,1000.0,160.0,Over-Exploited,28.4,26.5
+Rajasthan,Jaipur,Phagi,2023,3400.0,4100.0,3500.0,600.0,120.6,Over-Exploited,25.6,23.8
+Rajasthan,Jaipur,Shahpura,2023,3100.0,6400.0,5600.0,800.0,206.5,Over-Exploited,35.1,33.0
+Rajasthan,Jaipur,Sanganer,2023,3500.0,8900.0,6800.0,2100.0,254.3,Over-Exploited,41.2,38.9
+Rajasthan,Jodhpur,All,2023,38500.0,63680.0,57200.0,6480.0,165.4,Over-Exploited,48.5,46.8
+Rajasthan,Jodhpur,All,2022,39200.0,62100.0,56000.0,6100.0,158.4,Over-Exploited,47.2,45.6
+Rajasthan,Jodhpur,All,2021,39900.0,60800.0,55100.0,5700.0,152.4,Over-Exploited,46.1,44.3
+Rajasthan,Jodhpur,Bilara,2023,4100.0,7600.0,6900.0,700.0,185.4,Over-Exploited,52.1,50.3
+Rajasthan,Jodhpur,Bhopalgarh,2023,3800.0,6700.0,6100.0,600.0,176.3,Over-Exploited,49.4,47.5
+Rajasthan,Jodhpur,Mandor,2023,3200.0,5900.0,4800.0,1100.0,184.4,Over-Exploited,45.8,44.1
+Rajasthan,Ajmer,All,2023,29400.0,36160.0,30500.0,5660.0,123.0,Over-Exploited,24.6,22.8
+Rajasthan,Ajmer,All,2022,30100.0,35200.0,29900.0,5300.0,116.9,Over-Exploited,23.9,22.1
+Rajasthan,Ajmer,All,2021,30800.0,34400.0,29400.0,5000.0,111.7,Over-Exploited,23.1,21.5
+Maharashtra,Pune,All,2023,145200.0,98400.0,82100.0,16300.0,67.8,Safe,8.4,4.6
+Maharashtra,Pune,All,2022,143800.0,96200.0,80500.0,15700.0,66.9,Safe,8.1,4.4
+Maharashtra,Pune,All,2021,141500.0,94800.0,79600.0,15200.0,67.0,Safe,8.6,4.8
+Maharashtra,Pune,Haveli,2023,16200.0,14100.0,10200.0,3900.0,87.0,Semi-Critical,12.4,8.1
+Maharashtra,Pune,Baramati,2023,14800.0,11200.0,9800.0,1400.0,75.7,Semi-Critical,9.6,5.8
+Maharashtra,Pune,Shirur,2023,13500.0,10800.0,9600.0,1200.0,80.0,Semi-Critical,10.2,6.2
+Maharashtra,Pune,Daund,2023,12100.0,8900.0,7800.0,1100.0,73.6,Semi-Critical,8.9,5.1
+Maharashtra,Pune,Indapur,2023,11400.0,7400.0,6600.0,800.0,64.9,Safe,7.8,4.2
+Maharashtra,Pune,Junnar,2023,15600.0,8100.0,7100.0,1000.0,51.9,Safe,6.5,3.4
+Maharashtra,Pune,Khed,2023,13200.0,6900.0,5900.0,1000.0,52.3,Safe,6.8,3.6
+Maharashtra,Pune,Mulshi,2023,10500.0,3200.0,2400.0,800.0,30.5,Safe,4.2,2.1
+Maharashtra,Nagpur,All,2023,98200.0,57150.0,46800.0,10350.0,58.2,Safe,9.8,5.2
+Maharashtra,Nagpur,All,2022,97100.0,55900.0,46000.0,9900.0,57.6,Safe,9.5,4.9
+Maharashtra,Nagpur,All,2021,96400.0,54800.0,45200.0,9600.0,56.8,Safe,9.2,4.7
+Maharashtra,Nagpur,Nagpur Rural,2023,11200.0,7200.0,5600.0,1600.0,64.3,Safe,10.1,5.6
+Maharashtra,Nagpur,Kamptee,2023,8900.0,6100.0,4800.0,1300.0,68.5,Safe,9.4,5.1
+Maharashtra,Nagpur,Katol,2023,12400.0,8900.0,7800.0,1100.0,71.8,Semi-Critical,11.2,6.8
+Maharashtra,Nashik,All,2023,132400.0,92150.0,81000.0,11150.0,69.6,Safe,9.1,5.0
+Maharashtra,Nashik,All,2022,130800.0,89600.0,79100.0,10500.0,68.5,Safe,8.8,4.7
+Maharashtra,Nashik,Malegaon,2023,14200.0,11600.0,10400.0,1200.0,81.7,Semi-Critical,11.5,7.2
+Punjab,Ludhiana,All,2023,112000.0,228000.0,214000.0,14000.0,203.6,Over-Exploited,22.4,21.8
+Punjab,Ludhiana,All,2022,114200.0,224100.0,210900.0,13200.0,196.2,Over-Exploited,21.8,21.1
+Punjab,Ludhiana,All,2021,116000.0,221500.0,208900.0,12600.0,190.9,Over-Exploited,21.1,20.4
+Punjab,Ludhiana,Khanna,2023,10400.0,23500.0,22200.0,1300.0,226.0,Over-Exploited,24.1,23.5
+Punjab,Ludhiana,Samrala,2023,9800.0,21100.0,20100.0,1000.0,215.3,Over-Exploited,23.2,22.6
+Punjab,Ludhiana,Doraha,2023,8900.0,19400.0,18300.0,1100.0,218.0,Over-Exploited,22.9,22.2
+Punjab,Ludhiana,Jagraon,2023,12100.0,26800.0,25400.0,1400.0,221.5,Over-Exploited,25.3,24.7
+Punjab,Amritsar,All,2023,84200.0,158700.0,149200.0,9500.0,188.5,Over-Exploited,18.2,17.5
+Punjab,Amritsar,All,2022,85600.0,156100.0,147000.0,9100.0,182.4,Over-Exploited,17.6,16.9
+Punjab,Amritsar,Ajnala,2023,14200.0,24800.0,23400.0,1400.0,174.6,Over-Exploited,16.8,16.2
+Karnataka,Bengaluru Urban,All,2023,18400.0,25980.0,9800.0,16180.0,141.2,Over-Exploited,42.6,39.8
+Karnataka,Bengaluru Urban,All,2022,18800.0,25400.0,10100.0,15300.0,135.1,Over-Exploited,41.2,38.5
+Karnataka,Bengaluru Urban,All,2021,19200.0,24800.0,10400.0,14400.0,129.2,Over-Exploited,39.8,37.2
+Karnataka,Bengaluru Urban,Bangalore North,2023,4200.0,6800.0,2100.0,4700.0,161.9,Over-Exploited,45.2,42.4
+Karnataka,Bengaluru Urban,Bangalore South,2023,4600.0,7100.0,2300.0,4800.0,154.3,Over-Exploited,43.8,41.0
+Karnataka,Bengaluru Urban,Anekal,2023,5400.0,7800.0,3800.0,4000.0,144.4,Over-Exploited,41.5,38.7
+Karnataka,Mysuru,All,2023,76400.0,47750.0,39800.0,7950.0,62.5,Safe,11.2,7.4
+Karnataka,Mysuru,All,2022,75200.0,46100.0,38700.0,7400.0,61.3,Safe,10.8,7.1
+Karnataka,Mysuru,Mysore,2023,12400.0,9200.0,6800.0,2400.0,74.2,Semi-Critical,12.5,8.6
+Karnataka,Mysuru,Hunsur,2023,13800.0,8100.0,7100.0,1000.0,58.7,Safe,9.8,6.2
+Uttar Pradesh,Varanasi,All,2023,41200.0,30610.0,23400.0,7210.0,74.3,Semi-Critical,12.8,9.6
+Uttar Pradesh,Varanasi,All,2022,41800.0,29900.0,23000.0,6900.0,71.5,Semi-Critical,12.4,9.2
+Uttar Pradesh,Varanasi,Arajiline,2023,6200.0,4900.0,3900.0,1000.0,79.0,Semi-Critical,13.4,10.1
+Uttar Pradesh,Varanasi,Kashi Vidyapeeth,2023,5400.0,4800.0,3100.0,1700.0,88.9,Semi-Critical,14.6,11.2
+Uttar Pradesh,Varanasi,Pindra,2023,6800.0,4500.0,3800.0,700.0,66.2,Safe,11.5,8.4
+Uttar Pradesh,Agra,All,2023,58400.0,56300.0,48900.0,7400.0,96.4,Critical,26.5,24.1
+Uttar Pradesh,Agra,All,2022,59100.0,55400.0,48400.0,7000.0,93.7,Critical,25.8,23.5
+Uttar Pradesh,Agra,Barauli Ahir,2023,5100.0,5400.0,4600.0,800.0,105.9,Over-Exploited,28.2,25.8
+Uttar Pradesh,Agra,Fatehabad,2023,6200.0,5800.0,5200.0,600.0,93.5,Critical,25.4,23.0
+Tamil Nadu,Chennai,All,2023,8200.0,14100.0,1200.0,12900.0,172.0,Over-Exploited,6.8,4.2
+Tamil Nadu,Chennai,All,2022,8400.0,13800.0,1300.0,12500.0,164.3,Over-Exploited,6.5,3.9
+Tamil Nadu,Coimbatore,All,2023,62800.0,56020.0,48200.0,7820.0,89.2,Semi-Critical,18.5,14.2
+Tamil Nadu,Coimbatore,All,2022,63400.0,54800.0,47500.0,7300.0,86.4,Semi-Critical,17.9,13.8
+Tamil Nadu,Coimbatore,Sulur,2023,8400.0,8200.0,7200.0,1000.0,97.6,Critical,21.2,16.8
+Tamil Nadu,Coimbatore,Pollachi,2023,9800.0,7600.0,6800.0,800.0,77.6,Semi-Critical,16.4,12.5
+Gujarat,Ahmedabad,All,2023,71200.0,69800.0,54200.0,15600.0,98.0,Critical,31.4,28.6
+Gujarat,Ahmedabad,All,2022,72000.0,68400.0,53500.0,14900.0,95.0,Critical,30.8,28.0
+Telangana,Hyderabad,All,2023,12600.0,14800.0,1800.0,13000.0,117.5,Over-Exploited,14.2,11.5
+Telangana,Hyderabad,All,2022,12900.0,14400.0,1900.0,12500.0,111.6,Over-Exploited,13.8,11.1
