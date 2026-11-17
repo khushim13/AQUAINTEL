@@ -115,13 +115,27 @@ def clean_query(query: str) -> str:
 
 
 def name_similarity_scorer(s1: str, s2: str, **kwargs) -> float:
-    """Robust string similarity scorer for geographic names with length penalty."""
+    """Robust string similarity scorer for geographic names with length penalty and prefix support."""
+    s1_lower = s1.lower().strip()
+    s2_lower = s2.lower().strip()
+
+    prefix_score = 0.0
+    if len(s1_lower) >= 3 and len(s1_lower) < len(s2_lower):
+        if s2_lower.startswith(s1_lower):
+            prefix_score = 80.0
+        elif any(w.startswith(s1_lower) for w in s2_lower.split()):
+            prefix_score = 78.0
+
     len_diff = abs(len(s1) - len(s2))
     max_len = max(len(s1), len(s2))
     if max_len > 0 and (len_diff / max_len) > 0.5:
+        if prefix_score > 0.0:
+            return prefix_score
         # Significant length disparity -> heavily penalized
         return 0.0
-    return float(max(fuzz.ratio(s1, s2), fuzz.token_sort_ratio(s1, s2)))
+
+    raw_ratio = float(max(fuzz.ratio(s1, s2), fuzz.token_sort_ratio(s1, s2)))
+    return max(raw_ratio, prefix_score)
 
 
 class LocationResolver:
@@ -324,6 +338,17 @@ class LocationResolver:
             for s, e in qualifying
             if (top_score - s) <= margin and (e["canonical_name"] != top_entry["canonical_name"] or e["entity_type"] != top_entry["entity_type"] or e["district"] != top_entry["district"])
         ]
+
+        # For short prefix queries (length <= 3) that aren't exact matches, treat as ambiguous
+        if len(cleaned) <= 3 and top_score < 100.0:
+            all_ambiguous = [Candidate(score=round(top_score, 2), **top_entry)] + close_candidates
+            return ResolutionResult(
+                status="ambiguous",
+                query=query,
+                candidates=all_ambiguous,
+                score=round(top_score, 2),
+                message=f"Query '{query}' is ambiguous. Did you mean one of these: {', '.join(c.canonical_name for c in all_ambiguous)}?",
+            )
 
         if close_candidates:
             all_ambiguous = [Candidate(score=round(top_score, 2), **top_entry)] + close_candidates

@@ -1,0 +1,1464 @@
+[
+  {
+    "id": "Q001",
+    "question": "What is the groundwater level in Jaipur in 2023?",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 34.2
+  },
+  {
+    "id": "Q002",
+    "question": "Pre-monsoon water level in Jaipur for 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 34.2
+  },
+  {
+    "id": "Q003",
+    "question": "What was the post-monsoon water level in Jaipur in 2023?",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023,
+      "season": "post_monsoon"
+    },
+    "expected_value": 32.1
+  },
+  {
+    "id": "Q004",
+    "question": "Groundwater level in Jaipur in 2022",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2022,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 33.5
+  },
+  {
+    "id": "Q005",
+    "question": "Groundwater depth in Pune in 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Pune",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 8.4
+  },
+  {
+    "id": "Q006",
+    "question": "What is the post-monsoon water level in Pune in 2023?",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Pune",
+      "year": 2023,
+      "season": "post_monsoon"
+    },
+    "expected_value": 4.6
+  },
+  {
+    "id": "Q007",
+    "question": "Depth to groundwater in Ludhiana in 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Ludhiana",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 22.4
+  },
+  {
+    "id": "Q008",
+    "question": "Water level in Amritsar in 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Amritsar",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 18.2
+  },
+  {
+    "id": "Q009",
+    "question": "Water level depth in Bengaluru Urban in 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Bengaluru Urban",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 42.6
+  },
+  {
+    "id": "Q010",
+    "question": "Pre-monsoon water table in Varanasi in 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Varanasi",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 12.8
+  },
+  {
+    "id": "Q011",
+    "question": "Groundwater level in Agra in 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Agra",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 26.5
+  },
+  {
+    "id": "Q012",
+    "question": "What is the water level in Chennai in 2023?",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Chennai",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 6.8
+  },
+  {
+    "id": "Q013",
+    "question": "Water level in Coimbatore in 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Coimbatore",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 18.5
+  },
+  {
+    "id": "Q014",
+    "question": "Water level in Jaipru in 2023",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 34.2
+  },
+  {
+    "id": "Q015",
+    "question": "What is the groundwater level in Pune?",
+    "query_type": "water_level",
+    "expected_tool": "get_groundwater_level",
+    "expected_params": {
+      "location": "Pune",
+      "year": null,
+      "season": "pre_monsoon"
+    },
+    "expected_value": 8.4
+  },
+  {
+    "id": "Q016",
+    "question": "What is the stage of groundwater extraction in Jaipur in 2023?",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023
+    },
+    "expected_value": 202.9
+  },
+  {
+    "id": "Q017",
+    "question": "Stage of extraction percentage in Jaipur in 2022",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2022
+    },
+    "expected_value": 194.7
+  },
+  {
+    "id": "Q018",
+    "question": "What is the stage of groundwater extraction in Pune in 2023?",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Pune",
+      "year": 2023
+    },
+    "expected_value": 67.8
+  },
+  {
+    "id": "Q019",
+    "question": "Groundwater extraction rate in Nagpur in 2023",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Nagpur",
+      "year": 2023
+    },
+    "expected_value": 58.2
+  },
+  {
+    "id": "Q020",
+    "question": "Stage of extraction in Nashik in 2023",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Nashik",
+      "year": 2023
+    },
+    "expected_value": 69.6
+  },
+  {
+    "id": "Q021",
+    "question": "What is the stage of extraction in Ludhiana in 2023?",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Ludhiana",
+      "year": 2023
+    },
+    "expected_value": 203.6
+  },
+  {
+    "id": "Q022",
+    "question": "Stage of extraction percentage in Amritsar in 2023",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Amritsar",
+      "year": 2023
+    },
+    "expected_value": 188.5
+  },
+  {
+    "id": "Q023",
+    "question": "Groundwater extraction percentage in Bengaluru Urban in 2023",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Bengaluru Urban",
+      "year": 2023
+    },
+    "expected_value": 141.2
+  },
+  {
+    "id": "Q024",
+    "question": "Extraction stage of Mysuru in 2023",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Mysuru",
+      "year": 2023
+    },
+    "expected_value": 62.5
+  },
+  {
+    "id": "Q025",
+    "question": "What is the stage of extraction in Varanasi in 2023?",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Varanasi",
+      "year": 2023
+    },
+    "expected_value": 74.3
+  },
+  {
+    "id": "Q026",
+    "question": "Stage of extraction in Agra in 2023",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Agra",
+      "year": 2023
+    },
+    "expected_value": 96.4
+  },
+  {
+    "id": "Q027",
+    "question": "What is the stage of extraction in Chennai in 2023?",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Chennai",
+      "year": 2023
+    },
+    "expected_value": 172.0
+  },
+  {
+    "id": "Q028",
+    "question": "Stage of extraction in Ludhiyana in 2023",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Ludhiana",
+      "year": 2023
+    },
+    "expected_value": 203.6
+  },
+  {
+    "id": "Q029",
+    "question": "What is the stage of extraction in Banglore in 2023?",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Bengaluru Urban",
+      "year": 2023
+    },
+    "expected_value": 141.2
+  },
+  {
+    "id": "Q030",
+    "question": "What is the stage of extraction in Pune?",
+    "query_type": "stage_of_extraction",
+    "expected_tool": "get_stage_of_extraction",
+    "expected_params": {
+      "location": "Pune",
+      "year": null
+    },
+    "expected_value": 67.8
+  },
+  {
+    "id": "Q031",
+    "question": "Is Jaipur over-exploited or safe in 2023?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023
+    },
+    "expected_value": "Over-Exploited"
+  },
+  {
+    "id": "Q032",
+    "question": "Groundwater category of Jaipur in 2022",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2022
+    },
+    "expected_value": "Over-Exploited"
+  },
+  {
+    "id": "Q033",
+    "question": "Is Pune safe or over-exploited?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Pune",
+      "year": null
+    },
+    "expected_value": "Safe"
+  },
+  {
+    "id": "Q034",
+    "question": "Category of Nagpur in 2023",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Nagpur",
+      "year": 2023
+    },
+    "expected_value": "Safe"
+  },
+  {
+    "id": "Q035",
+    "question": "Is Ludhiana over-exploited in 2023?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Ludhiana",
+      "year": 2023
+    },
+    "expected_value": "Over-Exploited"
+  },
+  {
+    "id": "Q036",
+    "question": "Groundwater category status of Amritsar in 2023",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Amritsar",
+      "year": 2023
+    },
+    "expected_value": "Over-Exploited"
+  },
+  {
+    "id": "Q037",
+    "question": "Is Varanasi safe or critical in 2023?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Varanasi",
+      "year": 2023
+    },
+    "expected_value": "Semi-Critical"
+  },
+  {
+    "id": "Q038",
+    "question": "Category of Agra in 2023",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Agra",
+      "year": 2023
+    },
+    "expected_value": "Critical"
+  },
+  {
+    "id": "Q039",
+    "question": "Is Chennai over-exploited in 2023?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Chennai",
+      "year": 2023
+    },
+    "expected_value": "Over-Exploited"
+  },
+  {
+    "id": "Q040",
+    "question": "Category of Coimbatore in 2023",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Coimbatore",
+      "year": 2023
+    },
+    "expected_value": "Semi-Critical"
+  },
+  {
+    "id": "Q041",
+    "question": "Is Ahmedabad critical or safe in 2023?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Ahmedabad",
+      "year": 2023
+    },
+    "expected_value": "Critical"
+  },
+  {
+    "id": "Q042",
+    "question": "Groundwater status of Hyderabad in 2023",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Hyderabad",
+      "year": 2023
+    },
+    "expected_value": "Over-Exploited"
+  },
+  {
+    "id": "Q043",
+    "question": "Is Ahmdabad critical in 2023?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Ahmedabad",
+      "year": 2023
+    },
+    "expected_value": "Critical"
+  },
+  {
+    "id": "Q044",
+    "question": "Is Banaras safe or semi-critical in 2023?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Varanasi",
+      "year": 2023
+    },
+    "expected_value": "Semi-Critical"
+  },
+  {
+    "id": "Q045",
+    "question": "Is Amber block safe or over-exploited?",
+    "query_type": "category",
+    "expected_tool": "get_category",
+    "expected_params": {
+      "location": "Amber",
+      "year": null
+    },
+    "expected_value": "Over-Exploited"
+  },
+  {
+    "id": "Q046",
+    "question": "What is the annual groundwater recharge in Pune in 2023?",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Pune",
+      "year": 2023
+    },
+    "expected_value": 145200.0
+  },
+  {
+    "id": "Q047",
+    "question": "Annual extractable groundwater resource in Pune in 2022",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Pune",
+      "year": 2022
+    },
+    "expected_value": 143800.0
+  },
+  {
+    "id": "Q048",
+    "question": "Annual recharge in Jaipur in 2023",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023
+    },
+    "expected_value": 42100.5
+  },
+  {
+    "id": "Q049",
+    "question": "Recharge in Nagpur in 2023",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Nagpur",
+      "year": 2023
+    },
+    "expected_value": 98200.0
+  },
+  {
+    "id": "Q050",
+    "question": "Annual groundwater recharge in Nashik in 2023",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Nashik",
+      "year": 2023
+    },
+    "expected_value": 132400.0
+  },
+  {
+    "id": "Q051",
+    "question": "Annual extractable resource in Ludhiana in 2023",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Ludhiana",
+      "year": 2023
+    },
+    "expected_value": 112000.0
+  },
+  {
+    "id": "Q052",
+    "question": "Recharge in Amritsar in 2023",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Amritsar",
+      "year": 2023
+    },
+    "expected_value": 84200.0
+  },
+  {
+    "id": "Q053",
+    "question": "Annual recharge in Varanasi in 2023",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Varanasi",
+      "year": 2023
+    },
+    "expected_value": 41200.0
+  },
+  {
+    "id": "Q054",
+    "question": "Extractable groundwater resource in Agra in 2023",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Agra",
+      "year": 2023
+    },
+    "expected_value": 58400.0
+  },
+  {
+    "id": "Q055",
+    "question": "Annual recharge in Coimbatore in 2023",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Coimbatore",
+      "year": 2023
+    },
+    "expected_value": 62800.0
+  },
+  {
+    "id": "Q056",
+    "question": "How much groundwater is recharged annually in Pune?",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Pune",
+      "year": null
+    },
+    "expected_value": 145200.0
+  },
+  {
+    "id": "Q057",
+    "question": "Annual recharge in Varansi in 2023?",
+    "query_type": "recharge",
+    "expected_tool": "get_recharge",
+    "expected_params": {
+      "location": "Varanasi",
+      "year": 2023
+    },
+    "expected_value": 41200.0
+  },
+  {
+    "id": "Q058",
+    "question": "Total groundwater extraction in Jaipur in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023,
+      "usage": "total"
+    },
+    "expected_value": 85420.0
+  },
+  {
+    "id": "Q059",
+    "question": "Groundwater extracted for irrigation in Jaipur in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023,
+      "usage": "irrigation"
+    },
+    "expected_value": 72100.0
+  },
+  {
+    "id": "Q060",
+    "question": "Domestic groundwater extraction in Jaipur in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023,
+      "usage": "domestic"
+    },
+    "expected_value": 13320.0
+  },
+  {
+    "id": "Q061",
+    "question": "Total groundwater extraction in Pune in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Pune",
+      "year": 2023,
+      "usage": "total"
+    },
+    "expected_value": 98400.0
+  },
+  {
+    "id": "Q062",
+    "question": "Irrigation groundwater extraction in Pune in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Pune",
+      "year": 2023,
+      "usage": "irrigation"
+    },
+    "expected_value": 82100.0
+  },
+  {
+    "id": "Q063",
+    "question": "Domestic extraction in Pune in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Pune",
+      "year": 2023,
+      "usage": "domestic"
+    },
+    "expected_value": 16300.0
+  },
+  {
+    "id": "Q064",
+    "question": "Total extraction in Ludhiana in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Ludhiana",
+      "year": 2023,
+      "usage": "total"
+    },
+    "expected_value": 228000.0
+  },
+  {
+    "id": "Q065",
+    "question": "Irrigation extraction in Ludhiana in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Ludhiana",
+      "year": 2023,
+      "usage": "irrigation"
+    },
+    "expected_value": 214000.0
+  },
+  {
+    "id": "Q066",
+    "question": "Total extraction in Nagpur in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Nagpur",
+      "year": 2023,
+      "usage": "total"
+    },
+    "expected_value": 57150.0
+  },
+  {
+    "id": "Q067",
+    "question": "Total extraction in Varanasi in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Varanasi",
+      "year": 2023,
+      "usage": "total"
+    },
+    "expected_value": 30610.0
+  },
+  {
+    "id": "Q068",
+    "question": "Total groundwater extraction in Jaipur",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": null,
+      "usage": "total"
+    },
+    "expected_value": 85420.0
+  },
+  {
+    "id": "Q069",
+    "question": "Total extraction in Jaipru in 2023",
+    "query_type": "extraction",
+    "expected_tool": "get_extraction",
+    "expected_params": {
+      "location": "Jaipur",
+      "year": 2023,
+      "usage": "total"
+    },
+    "expected_value": 85420.0
+  },
+  {
+    "id": "Q070",
+    "question": "Compare Pune and Nagpur in 2023",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Pune",
+        "Nagpur"
+      ],
+      "metric": "stage_of_extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      67.8,
+      58.2
+    ]
+  },
+  {
+    "id": "Q071",
+    "question": "Compare groundwater extraction between Pune and Nagpur in 2023",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Pune",
+        "Nagpur"
+      ],
+      "metric": "stage_of_extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      67.8,
+      58.2
+    ]
+  },
+  {
+    "id": "Q072",
+    "question": "Compare water level between Jaipur and Jodhpur in 2023",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Jaipur",
+        "Jodhpur"
+      ],
+      "metric": "water_level",
+      "year": 2023
+    },
+    "expected_value": [
+      34.2,
+      48.5
+    ]
+  },
+  {
+    "id": "Q073",
+    "question": "Compare recharge between Pune and Nashik in 2023",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Pune",
+        "Nashik"
+      ],
+      "metric": "recharge",
+      "year": 2023
+    },
+    "expected_value": [
+      145200.0,
+      132400.0
+    ]
+  },
+  {
+    "id": "Q074",
+    "question": "Compare Ludhiana and Amritsar extraction in 2023",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Ludhiana",
+        "Amritsar"
+      ],
+      "metric": "extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      228000.0,
+      158700.0
+    ]
+  },
+  {
+    "id": "Q075",
+    "question": "Compare Varanasi and Agra in 2023",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Varanasi",
+        "Agra"
+      ],
+      "metric": "stage_of_extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      74.3,
+      96.4
+    ]
+  },
+  {
+    "id": "Q076",
+    "question": "Compare Chennai and Coimbatore in 2023",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Chennai",
+        "Coimbatore"
+      ],
+      "metric": "stage_of_extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      172.0,
+      89.2
+    ]
+  },
+  {
+    "id": "Q077",
+    "question": "Compare Pune and Nagpur",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Pune",
+        "Nagpur"
+      ],
+      "metric": "stage_of_extraction",
+      "year": null
+    },
+    "expected_value": [
+      67.8,
+      58.2
+    ]
+  },
+  {
+    "id": "Q078",
+    "question": "Compare Jaipur and Jodhpur",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Jaipur",
+        "Jodhpur"
+      ],
+      "metric": "stage_of_extraction",
+      "year": null
+    },
+    "expected_value": [
+      202.9,
+      165.4
+    ]
+  },
+  {
+    "id": "Q079",
+    "question": "Compare Ahmedabad and Hyderabad in 2023",
+    "query_type": "compare",
+    "expected_tool": "compare_locations",
+    "expected_params": {
+      "locations": [
+        "Ahmedabad",
+        "Hyderabad"
+      ],
+      "metric": "stage_of_extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      98.0,
+      117.5
+    ]
+  },
+  {
+    "id": "Q080",
+    "question": "What is the historical trend of groundwater in Jaipur?",
+    "query_type": "trend",
+    "expected_tool": "get_trend",
+    "expected_params": {
+      "location": "Jaipur",
+      "metric": "stage_of_extraction"
+    },
+    "expected_value": 14.7
+  },
+  {
+    "id": "Q081",
+    "question": "Groundwater trend in Jaipur",
+    "query_type": "trend",
+    "expected_tool": "get_trend",
+    "expected_params": {
+      "location": "Jaipur",
+      "metric": "stage_of_extraction"
+    },
+    "expected_value": 14.7
+  },
+  {
+    "id": "Q082",
+    "question": "Historical trend for Pune groundwater",
+    "query_type": "trend",
+    "expected_tool": "get_trend",
+    "expected_params": {
+      "location": "Pune",
+      "metric": "stage_of_extraction"
+    },
+    "expected_value": 0.8
+  },
+  {
+    "id": "Q083",
+    "question": "Trend of extraction in Ludhiana",
+    "query_type": "trend",
+    "expected_tool": "get_trend",
+    "expected_params": {
+      "location": "Ludhiana",
+      "metric": "stage_of_extraction"
+    },
+    "expected_value": 12.7
+  },
+  {
+    "id": "Q084",
+    "question": "Historical water level trend in Jodhpur",
+    "query_type": "trend",
+    "expected_tool": "get_trend",
+    "expected_params": {
+      "location": "Jodhpur",
+      "metric": "water_level"
+    },
+    "expected_value": 2.4
+  },
+  {
+    "id": "Q085",
+    "question": "Groundwater change over years in Ajmer",
+    "query_type": "trend",
+    "expected_tool": "get_trend",
+    "expected_params": {
+      "location": "Ajmer",
+      "metric": "stage_of_extraction"
+    },
+    "expected_value": 11.3
+  },
+  {
+    "id": "Q086",
+    "question": "Historical trend in Nagpur",
+    "query_type": "trend",
+    "expected_tool": "get_trend",
+    "expected_params": {
+      "location": "Nagpur",
+      "metric": "stage_of_extraction"
+    },
+    "expected_value": 1.4
+  },
+  {
+    "id": "Q087",
+    "question": "Groundwater trend in Varanasi over time",
+    "query_type": "trend",
+    "expected_tool": "get_trend",
+    "expected_params": {
+      "location": "Varanasi",
+      "metric": "stage_of_extraction"
+    },
+    "expected_value": 2.8
+  },
+  {
+    "id": "Q088",
+    "question": "Rank Pune, Jaipur, Ludhiana by extraction",
+    "query_type": "rank",
+    "expected_tool": "rank_locations",
+    "expected_params": {
+      "locations": [
+        "Pune",
+        "Jaipur",
+        "Ludhiana"
+      ],
+      "metric": "stage_of_extraction",
+      "year": null
+    },
+    "expected_value": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "Q089",
+    "question": "Rank Ludhiana, Amritsar, Pune by groundwater extraction in 2023",
+    "query_type": "rank",
+    "expected_tool": "rank_locations",
+    "expected_params": {
+      "locations": [
+        "Ludhiana",
+        "Amritsar",
+        "Pune"
+      ],
+      "metric": "stage_of_extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "Q090",
+    "question": "Rank Jaipur, Jodhpur, Pune",
+    "query_type": "rank",
+    "expected_tool": "rank_locations",
+    "expected_params": {
+      "locations": [
+        "Jaipur",
+        "Jodhpur",
+        "Pune"
+      ],
+      "metric": "stage_of_extraction",
+      "year": null
+    },
+    "expected_value": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "Q091",
+    "question": "Rank Nagpur, Nashik, Pune by extraction",
+    "query_type": "rank",
+    "expected_tool": "rank_locations",
+    "expected_params": {
+      "locations": [
+        "Nagpur",
+        "Nashik",
+        "Pune"
+      ],
+      "metric": "stage_of_extraction",
+      "year": null
+    },
+    "expected_value": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "Q092",
+    "question": "Top groundwater extraction between Jaipur and Pune",
+    "query_type": "rank",
+    "expected_tool": "rank_locations",
+    "expected_params": {
+      "locations": [
+        "Jaipur",
+        "Pune"
+      ],
+      "metric": "stage_of_extraction",
+      "year": null
+    },
+    "expected_value": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "Q093",
+    "question": "Rank Varanasi and Agra by extraction in 2023",
+    "query_type": "rank",
+    "expected_tool": "rank_locations",
+    "expected_params": {
+      "locations": [
+        "Varanasi",
+        "Agra"
+      ],
+      "metric": "stage_of_extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "Q094",
+    "question": "Rank Chennai and Coimbatore in 2023",
+    "query_type": "rank",
+    "expected_tool": "rank_locations",
+    "expected_params": {
+      "locations": [
+        "Chennai",
+        "Coimbatore"
+      ],
+      "metric": "stage_of_extraction",
+      "year": 2023
+    },
+    "expected_value": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "Q095",
+    "question": "Rank Ahmedabad and Hyderabad by extraction",
+    "query_type": "rank",
+    "expected_tool": "rank_locations",
+    "expected_params": {
+      "locations": [
+        "Ahmedabad",
+        "Hyderabad"
+      ],
+      "metric": "stage_of_extraction",
+      "year": null
+    },
+    "expected_value": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "Q096",
+    "question": "List all blocks in Jaipur in 2023",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Jaipur",
+      "category": null,
+      "year": 2023
+    },
+    "expected_value": 9
+  },
+  {
+    "id": "Q097",
+    "question": "Show all blocks in Jaipur",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Jaipur",
+      "category": null,
+      "year": null
+    },
+    "expected_value": 9
+  },
+  {
+    "id": "Q098",
+    "question": "List all over-exploited blocks in Jaipur in 2023",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Jaipur",
+      "category": "Over-Exploited",
+      "year": 2023
+    },
+    "expected_value": 9
+  },
+  {
+    "id": "Q099",
+    "question": "List over-exploited blocks in Jaipur",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Jaipur",
+      "category": "Over-Exploited",
+      "year": null
+    },
+    "expected_value": 9
+  },
+  {
+    "id": "Q100",
+    "question": "List all blocks in Pune",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Pune",
+      "category": null,
+      "year": null
+    },
+    "expected_value": 8
+  },
+  {
+    "id": "Q101",
+    "question": "List semi-critical blocks in Pune in 2023",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Pune",
+      "category": "Semi-Critical",
+      "year": 2023
+    },
+    "expected_value": 4
+  },
+  {
+    "id": "Q102",
+    "question": "List safe blocks in Pune",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Pune",
+      "category": "Safe",
+      "year": null
+    },
+    "expected_value": 4
+  },
+  {
+    "id": "Q103",
+    "question": "List all blocks in Ludhiana in 2023",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Ludhiana",
+      "category": null,
+      "year": 2023
+    },
+    "expected_value": 4
+  },
+  {
+    "id": "Q104",
+    "question": "List over-exploited blocks in Ludhiana",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Ludhiana",
+      "category": "Over-Exploited",
+      "year": null
+    },
+    "expected_value": 4
+  },
+  {
+    "id": "Q105",
+    "question": "Show all blocks in Varanasi in 2023",
+    "query_type": "list_blocks",
+    "expected_tool": "list_blocks",
+    "expected_params": {
+      "district": "Varanasi",
+      "category": null,
+      "year": 2023
+    },
+    "expected_value": 3
+  },
+  {
+    "id": "Q106",
+    "question": "Groundwater status in Ban",
+    "query_type": "ambiguous",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "ambiguous_or_clarification"
+  },
+  {
+    "id": "Q107",
+    "question": "Water level in Nag",
+    "query_type": "ambiguous",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "ambiguous_or_clarification"
+  },
+  {
+    "id": "Q108",
+    "question": "Groundwater category in Bil",
+    "query_type": "ambiguous",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "ambiguous_or_clarification"
+  },
+  {
+    "id": "Q109",
+    "question": "Status of Bar",
+    "query_type": "ambiguous",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "ambiguous_or_clarification"
+  },
+  {
+    "id": "Q110",
+    "question": "Water level in Kot",
+    "query_type": "ambiguous",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "ambiguous_or_clarification"
+  },
+  {
+    "id": "Q111",
+    "question": "groundwater level in Atlantis12345 in 2023",
+    "query_type": "no_data",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "data_not_available"
+  },
+  {
+    "id": "Q112",
+    "question": "What is the extraction stage of Wakanda?",
+    "query_type": "no_data",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "data_not_available"
+  },
+  {
+    "id": "Q113",
+    "question": "Is ElDorado over-exploited or safe?",
+    "query_type": "no_data",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "data_not_available"
+  },
+  {
+    "id": "Q114",
+    "question": "Annual recharge in GothamCity in 2023",
+    "query_type": "no_data",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "data_not_available"
+  },
+  {
+    "id": "Q115",
+    "question": "Groundwater level in MiddleEarth in 2021",
+    "query_type": "no_data",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "data_not_available"
+  },
+  {
+    "id": "Q116",
+    "question": "Water table depth in Narnia in 2023",
+    "query_type": "no_data",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "data_not_available"
+  },
+  {
+    "id": "Q117",
+    "question": "What is the capital of France?",
+    "query_type": "out_of_scope",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "refusal"
+  },
+  {
+    "id": "Q118",
+    "question": "Can you write a poem about rain?",
+    "query_type": "out_of_scope",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "refusal"
+  },
+  {
+    "id": "Q119",
+    "question": "Who is the current prime minister of India?",
+    "query_type": "out_of_scope",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "refusal"
+  },
+  {
+    "id": "Q120",
+    "question": "What is the recipe for masala chai?",
+    "query_type": "out_of_scope",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "refusal"
+  },
+  {
+    "id": "Q121",
+    "question": "How do I install python on windows?",
+    "query_type": "out_of_scope",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "refusal"
+  },
+  {
+    "id": "Q122",
+    "question": "Who won the cricket world cup?",
+    "query_type": "out_of_scope",
+    "expected_tool": null,
+    "expected_params": null,
+    "expected_value": "refusal"
+  }
+]

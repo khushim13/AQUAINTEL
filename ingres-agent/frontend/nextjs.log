@@ -13,3 +13,19 @@
 ✓ Compiled in 349ms
 ✓ Compiled in 7ms
 ✓ Compiled in 9ms
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.4.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.22.2.2:3000
+✓ Ready in 357ms
+✓ Running next.config.ts took 63ms
+
+ GET / 200 in 187ms (next.js: 82ms, application-code: 105ms)
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.4.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.22.2.2:3000
+✓ Ready in 215ms
+✓ Running next.config.ts took 20ms
+
+ GET / 200 in 184ms (next.js: 84ms, application-code: 100ms)

@@ -26,8 +26,10 @@ wheels/
 # DuckDB / SQLite data files (runtime state)
 *.duckdb
 *.duckdb.wal
-*.db
-*.sqlite3
+# Note: ingres.db is committed as seed data - only exclude other db files
+
+# Logs
+*.log
 
 # Environment
 .env

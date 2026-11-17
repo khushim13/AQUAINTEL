@@ -39,8 +39,13 @@ Strict Operating Rules:
    - year (e.g., 2023)
    - location (canonical district/block and state)
    - source: "INGRES (ingres.iith.ac.in) / CGWB Open Data"
-5. If the location is ambiguous, politely list the matching candidates and ask the user to clarify.
-6. Provide a concise, professional, and accessible response.
+5. Tool Selection Guidance:
+   - Use 'get_category' when inquiring about the status or category of a specific location or block (e.g. 'Is Amber block safe?').
+   - Use 'list_blocks' ONLY when the user requests a list, inventory, or count of blocks within a district (e.g. 'List all blocks in Jaipur'). Do not use for querying a single block's category.
+   - Use 'rank_locations' when the user asks for the 'top', 'highest', or 'lowest' locations among a group. Use 'compare_locations' when comparing locations without ranking.
+   - Use 'get_stage_of_extraction' for percentage / rate of extraction (SOE %). Use 'get_extraction' for volumetric extraction draft in ham.
+6. If the location is ambiguous or incomplete, politely list the matching candidates and ask the user to clarify. Do not guess.
+7. Provide a concise, professional, and accessible response.
 """
 
 TOOL_REGISTRY = {
@@ -98,7 +103,7 @@ def get_gemini_tools():
                     ),
                     types.FunctionDeclaration(
                         name="get_category",
-                        description="Retrieve groundwater assessment category (Safe, Semi-Critical, Critical, Over-Exploited).",
+                        description="Retrieve groundwater assessment category (Safe, Semi-Critical, Critical, Over-Exploited) for a specific district or named block.",
                         parameters=types.Schema(
                             type=types.Type.OBJECT,
                             properties={
@@ -135,7 +140,7 @@ def get_gemini_tools():
                     ),
                     types.FunctionDeclaration(
                         name="compare_locations",
-                        description="Compare groundwater metrics (stage_of_extraction, water_level, recharge, extraction) across multiple locations.",
+                        description="Compare groundwater metrics (stage_of_extraction, water_level, recharge, extraction) side-by-side across multiple locations without ranking.",
                         parameters=types.Schema(
                             type=types.Type.OBJECT,
                             properties={
@@ -166,7 +171,7 @@ def get_gemini_tools():
                     ),
                     types.FunctionDeclaration(
                         name="rank_locations",
-                        description="Rank a list of locations by a metric (highest or lowest first).",
+                        description="Rank a list of locations by a metric (highest or lowest first). Use when user asks for top, highest, or lowest locations.",
                         parameters=types.Schema(
                             type=types.Type.OBJECT,
                             properties={
@@ -184,7 +189,7 @@ def get_gemini_tools():
                     ),
                     types.FunctionDeclaration(
                         name="list_blocks",
-                        description="List all assessment blocks in a district, optionally filtered by category (Safe, Semi-Critical, Critical, Over-Exploited).",
+                        description="List or inventory all assessment blocks in a district, optionally filtered by category (Safe, Semi-Critical, Critical, Over-Exploited). Do NOT use for single block category queries.",
                         parameters=types.Schema(
                             type=types.Type.OBJECT,
                             properties={
@@ -347,11 +352,27 @@ def compose_grounded_answer(tool_name: str, params: Dict[str, Any], tool_data: D
 
 def heuristic_intent_parser(user_message: str) -> Optional[Tuple[str, Dict[str, Any]]]:
     """Semantic intent parser for natural language queries (works offline and as zero-latency fallback)."""
-    msg = user_message.lower()
+    msg = user_message.lower().strip()
+
+    # 0. Out-of-scope intent detection
+    oos_patterns = [
+        r"\b(?:capital of|prime minister|president|recipe|poem|song|cricket|football|movie|actor|who won|world cup|install python|how to code)\b",
+    ]
+    if any(re.search(p, msg) for p in oos_patterns):
+        return None
 
     # Extract year if present (e.g. 2021, 2022, 2023)
     year_match = re.search(r"\b(202[0-5])\b", msg)
     year = int(year_match.group(1)) if year_match else None
+
+    # Check for rank queries
+    if "rank" in msg or "top" in msg or "highest" in msg or "lowest" in msg:
+        locations_found = []
+        for name in ["jaipur", "jodhpur", "pune", "nagpur", "nashik", "ludhiana", "amritsar", "bengaluru", "bangalore", "mysuru", "varanasi", "agra", "chennai", "coimbatore", "ahmedabad", "hyderabad"]:
+            if name in msg:
+                locations_found.append(name.capitalize())
+        if locations_found:
+            return "rank_locations", {"locations": locations_found, "metric": "stage_of_extraction", "year": year}
 
     # Check for compare queries
     if "compare" in msg or " vs " in msg or " versus " in msg or "between" in msg:
@@ -369,17 +390,8 @@ def heuristic_intent_parser(user_message: str) -> Optional[Tuple[str, Dict[str, 
                 metric = "extraction"
             return "compare_locations", {"locations": locations_found, "metric": metric, "year": year}
 
-    # Check for rank queries
-    if "rank" in msg or "top" in msg or "highest" in msg or "lowest" in msg:
-        locations_found = []
-        for name in ["jaipur", "jodhpur", "pune", "nagpur", "nashik", "ludhiana", "amritsar", "bengaluru", "bangalore", "mysuru", "varanasi", "agra", "chennai", "coimbatore", "ahmedabad", "hyderabad"]:
-            if name in msg:
-                locations_found.append(name.capitalize())
-        if locations_found:
-            return "rank_locations", {"locations": locations_found, "metric": "stage_of_extraction", "year": year}
-
     # Check for list blocks query
-    if "block" in msg and ("list" in msg or "all" in msg or "show" in msg or "find" in msg or "what are" in msg or "critical" in msg or "over" in msg):
+    if ("list" in msg or "show all" in msg or "show blocks" in msg or "blocks in" in msg or "all blocks" in msg or "what are the blocks" in msg) and "block" in msg:
         cat = None
         if "over-exploited" in msg or "overexploited" in msg or "over exploited" in msg:
             cat = "Over-Exploited"
@@ -420,20 +432,26 @@ def heuristic_intent_parser(user_message: str) -> Optional[Tuple[str, Dict[str, 
             break
 
     if not target_loc:
-        # Extract location after prepositions like 'in', 'for', 'of', 'at'
-        prep_match = re.search(r"\b(?:in|at|for|of)\s+([A-Za-z0-9_-]+)", user_message)
-        if prep_match:
-            candidate = prep_match.group(1).strip()
-            if candidate.lower() not in ("district", "block", "state", "the", "year", "all"):
-                target_loc = candidate
-
-    if not target_loc:
-        # Try finding location via words
-        words = re.findall(r"\b[A-Z][a-z0-9]+\b", user_message)
-        for w in words:
-            if w.lower() not in ("what", "is", "the", "in", "for", "district", "block", "state", "show", "tell", "groundwater", "annual", "level", "current"):
-                target_loc = w
-                break
+        # Check words excluding stopwords and metric terms
+        stopwords = {
+            "what", "is", "the", "stage", "of", "extraction", "rate", "percentage", "pct",
+            "level", "depth", "water", "groundwater", "recharge", "annual", "resource",
+            "category", "status", "safe", "critical", "semi-critical", "semicritical", "semi",
+            "over-exploited", "overexploited", "over", "exploited", "in", "for", "at",
+            "between", "and", "vs", "versus", "all", "blocks", "block", "district", "state",
+            "trend", "historical", "rank", "top", "show", "list", "tell", "pre-monsoon",
+            "post-monsoon", "monsoon", "year", "years", "change", "time", "past", "how",
+            "much", "total", "irrigation", "domestic", "was", "were", "or", "to", "can",
+            "you", "give", "me", "details"
+        }
+        cleaned_msg = re.sub(r"[?,!]", "", user_message)
+        non_stopwords = []
+        for word in cleaned_msg.split():
+            clean_w = re.sub(r"[^a-zA-Z0-9]", "", word)
+            if clean_w.lower() not in stopwords and not re.match(r"^\d+$", clean_w):
+                non_stopwords.append(clean_w)
+        if non_stopwords:
+            target_loc = " ".join(non_stopwords)
 
     if not target_loc:
         target_loc = "unknown"
@@ -443,7 +461,7 @@ def heuristic_intent_parser(user_message: str) -> Optional[Tuple[str, Dict[str, 
         season = "post_monsoon" if "post" in msg else "pre_monsoon"
         return "get_groundwater_level", {"location": target_loc, "year": year, "season": season}
 
-    if "stage" in msg or "soe" in msg or "%" in msg or "percent" in msg or "percentage" in msg:
+    if "stage" in msg or "soe" in msg or "%" in msg or "percent" in msg or "percentage" in msg or ("rate" in msg and "extract" in msg):
         return "get_stage_of_extraction", {"location": target_loc, "year": year}
 
     if "category" in msg or "status" in msg or "safe" in msg or "critical" in msg or "over-exploited" in msg or "overexploited" in msg:
@@ -503,10 +521,10 @@ async def run_agent(user_message: str, api_key: Optional[str] = None) -> AgentOu
             tool_name, raw_params = parsed
         else:
             return AgentOutput(
-                answer="I couldn't identify the groundwater metric or location you are querying. Please ask e.g.: 'What is the groundwater level in Jaipur in 2023?' or 'Is Pune safe or over-exploited?'",
+                answer="I am the INGRES Groundwater Virtual Assistant (SIH25066). I only answer questions related to India's groundwater resources, water levels, extraction stages, and aquifer assessments. Please ask about a district or block (e.g., 'What is the groundwater level in Jaipur in 2023?').",
                 tool_called=None,
                 params=None,
-                data=None,
+                data={"error": "out_of_scope_refusal"},
             )
 
     # 3. Entity Resolution: Normalize location names using RapidFuzz
@@ -515,7 +533,7 @@ async def run_agent(user_message: str, api_key: Optional[str] = None) -> AgentOu
     if ambiguity_msg:
         return AgentOutput(
             answer=ambiguity_msg,
-            tool_called=tool_name,
+            tool_called=None,
             params=normalized_params,
             data={"status": "ambiguous"},
         )
