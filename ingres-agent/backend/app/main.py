@@ -1,3 +1,4 @@
+import time
 from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 from fastapi import FastAPI
@@ -41,6 +42,7 @@ class ChatResponse(BaseModel):
     data: Optional[Dict[str, Any]] = Field(None, description="Raw structured data payload returned by tool")
     detected_language: str = Field(default="en", description="Detected language ('en' or 'hi')")
     response_language: str = Field(default="en", description="Language of the answer ('en' or 'hi')")
+    latency_ms: Optional[float] = Field(default=None, description="Execution latency in milliseconds")
 
 
 @app.get("/")
@@ -71,6 +73,7 @@ def health_check():
 @app.post(f"{settings.API_PREFIX}/chat", response_model=ChatResponse)
 async def chat_endpoint(payload: ChatRequest):
     """Chat endpoint supporting English and Hindi with automatic language detection."""
+    start_time = time.perf_counter()
     detected = detect_language(payload.message)
     target_lang = payload.language if payload.language in ("en", "hi") else detected
 
@@ -92,6 +95,8 @@ async def chat_endpoint(payload: ChatRequest):
             tool_data=result.data,
         )
 
+    latency_ms = round((time.perf_counter() - start_time) * 1000, 1)
+
     return ChatResponse(
         answer=final_answer,
         tool_called=result.tool_called,
@@ -99,4 +104,5 @@ async def chat_endpoint(payload: ChatRequest):
         data=result.data,
         detected_language=detected,
         response_language=target_lang if target_lang in ("en", "hi") else detected,
+        latency_ms=latency_ms,
     )

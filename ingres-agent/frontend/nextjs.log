@@ -29,3 +29,24 @@
 ✓ Running next.config.ts took 20ms
 
  GET / 200 in 184ms (next.js: 84ms, application-code: 100ms)
+ GET / 200 in 80ms (next.js: 11ms, application-code: 69ms)
+ GET / 200 in 41ms (next.js: 5ms, application-code: 36ms)
+⚠ Blocked cross-origin request to Next.js dev resource /_next/hmr from "127.0.0.1".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['127.0.0.1'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 34ms (next.js: 2ms, application-code: 32ms)
+ GET / 200 in 18ms (next.js: 1.9ms, application-code: 16ms)
+ GET / 200 in 19ms (next.js: 0.6ms, application-code: 19ms)
+ GET / 200 in 27ms (next.js: 1.5ms, application-code: 26ms)
+ GET / 200 in 36ms (next.js: 1.9ms, application-code: 34ms)
+ GET / 200 in 33ms (next.js: 3ms, application-code: 30ms)
+ GET / 200 in 37ms (next.js: 4ms, application-code: 33ms)
+ GET / 200 in 28ms (next.js: 1.3ms, application-code: 27ms)
